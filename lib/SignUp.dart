@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Time_Line.dart';
+
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
 
@@ -58,11 +60,16 @@ class _SignUpState extends State<SignUp> {
                   prefixIcon: Icon(Icons.lock)
 
                 ),
+                keyboardType: TextInputType.visiblePassword,
+                obscureText: true,
               ),
               SizedBox(height: 40,),
               Container(
                 color: Colors.blue,
-                child: MaterialButton(onPressed: (){},
+                child: MaterialButton(onPressed: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => TimeLine()));
+
+                },
                 child: Text("Sign Up",
                   style: TextStyle(color: Colors.white),
                 ),

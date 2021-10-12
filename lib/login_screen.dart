@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'SignUp.dart';
+
 
 class LoginScreen extends StatelessWidget {
 
@@ -67,6 +69,7 @@ class LoginScreen extends StatelessWidget {
                   child: MaterialButton(onPressed: (){
                     print(EmailController.text);
                     print(PasswordController.text);
+
                   },
                   child: Text("LOGIN"
                   ,style: TextStyle(color: Colors.white),
@@ -80,7 +83,10 @@ class LoginScreen extends StatelessWidget {
 
                     Text("don't have account?"),
                     TextButton(
-                        onPressed: (){},
+                        onPressed: (){
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignUp()));
+
+                        },
                         child: Text("Regester Now"),
                       ) ,
                   ],
