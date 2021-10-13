@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginscreen/timelines.dart';
 
 import 'Time_Line.dart';
 
@@ -67,7 +68,7 @@ class _SignUpState extends State<SignUp> {
               Container(
                 color: Colors.blue,
                 child: MaterialButton(onPressed: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => TimeLine()));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Posts()));
 
                 },
                 child: Text("Sign Up",
