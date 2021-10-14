@@ -31,7 +31,9 @@ class _PostsState extends State<Posts> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             ListTile(
-              leading: CircleAvatar(),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage('assets/images/10.jpg'),
+              ),
               title: Text(
                 "Mohamed Gom3a",
                 style: TextStyle(
@@ -98,7 +100,11 @@ class _PostsState extends State<Posts> {
                     },
                     icon: Icon(_isCommented ? Icons.comment : Icons.comment),
                     label: Text(
-                      _isCommented ? "comment" : "Un Comment",
+                      _isCommented ? "Comment" : "Comment",
+                      style: TextStyle(
+                        color: _isCommented? Colors.white : Colors.black
+                      ),
+
                     ),
                   ),
                   SizedBox(
@@ -124,7 +130,10 @@ class _PostsState extends State<Posts> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 ListTile(
-                  leading: CircleAvatar(),
+                  leading: CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/10.jpg'),
+
+                  ),
                   title: Text(
                     "Mohamed Gom3a",
                     style: TextStyle(
@@ -219,7 +228,10 @@ class _PostsState extends State<Posts> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 ListTile(
-                  leading: CircleAvatar(),
+                  leading: CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/10.jpg'),
+
+                  ),
                   title: Text(
                     "Mohamed Gom3a",
                     style: TextStyle(
@@ -314,7 +326,10 @@ class _PostsState extends State<Posts> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 ListTile(
-                  leading: CircleAvatar(),
+                  leading: CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/10.jpg'),
+
+                  ),
                   title: Text(
                     "Mohamed Gom3a",
                     style: TextStyle(
