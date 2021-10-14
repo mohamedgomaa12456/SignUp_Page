@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:loginscreen/timelines.dart';
 
 import 'SignUp.dart';
 
@@ -8,6 +9,8 @@ class LoginScreen extends StatelessWidget {
 
   var EmailController =TextEditingController();
   var PasswordController =TextEditingController();
+
+  bool _Show = false;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +51,7 @@ class LoginScreen extends StatelessWidget {
                 TextFormField(
                   controller: PasswordController,
                   keyboardType:TextInputType.visiblePassword,
-                  obscureText: true,  // to hidden password
+                   obscureText: true ,  // to hidden password
                   onFieldSubmitted: (value){   //عشان لما ادخل القيمه تظهرلي تحت هنا ف run
                     print(value);
                   },
@@ -57,7 +60,8 @@ class LoginScreen extends StatelessWidget {
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(
                         Icons.lock),
-                    suffixIcon: Icon(
+                    suffixIcon:
+                    Icon(
                         Icons.remove_red_eye),
                   ),
                 ),
@@ -69,6 +73,8 @@ class LoginScreen extends StatelessWidget {
                   child: MaterialButton(onPressed: (){
                     print(EmailController.text);
                     print(PasswordController.text);
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => Posts()));
+
 
                   },
                   child: Text("LOGIN"
